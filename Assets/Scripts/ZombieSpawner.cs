@@ -42,6 +42,11 @@ public class ZombieSpawner : MonoBehaviour
         }
     }
 
+    public void StopSpawning()
+    {
+        StopAllCoroutines();
+    }
+
     private void SpawnZombie()
     {
         // Get a random point on a circle
