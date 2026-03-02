@@ -22,8 +22,9 @@ public class CameraController : MonoBehaviour
     {
         if (player != null)
         {
-            transform.position = player.position + offset;
-            transform.LookAt(player);
+            // Follow the player on the X and Z axes, but keep the camera's fixed height
+            Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
+            transform.position = targetPosition;
         }
     }
 }

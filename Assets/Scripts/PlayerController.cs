@@ -61,7 +61,10 @@ public class PlayerController : MonoBehaviour
 
                 if (lookDirection.sqrMagnitude > 0.001f)
                 {
-                    transform.rotation = Quaternion.LookRotation(lookDirection);
+                    // Calculate the rotation needed to look at the mouse
+                    Quaternion targetRotation = Quaternion.LookRotation(lookDirection);
+                    // Explicitly lock X and Z axes to 0 to prevent vertical tilt
+                    transform.rotation = Quaternion.Euler(0, targetRotation.eulerAngles.y, 0);
                 }
             }
         }
