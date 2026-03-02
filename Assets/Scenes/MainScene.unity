@@ -266,6 +266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 5
+  bulletPrefab: {fileID: 3556498114785785589, guid: dbdc19fdf7e2f1742928ebac60853bea, type: 3}
+  bulletSpeed: 20
 --- !u!143 &691325378
 CharacterController:
   m_ObjectHideFlags: 0
